@@ -5,41 +5,116 @@
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
+    <style>
+        /* Add some basic styling to ensure the slideshow works */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+
+        .product-content {
+            display: inline-block;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .productimg {
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
 </head>
 
 <body>
     <div>
-        <div class="top-bar">
-            <h1>The Meat Room</h1>
-            <h6>Premium butcher</h6>
+        <div>
+            <div class="top-bar">
+                <h1>The Meat Room</h1>
+                <h6>Premium butcher</h6>
+            </div>
+            <div class="nav">
+                <a href="home.html">
+                    <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
+                </a>
+                
+                <!-- Hamburger Icon for Mobile Navigation -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="dropdown">
+                        <a href="shop.html">SHOP</a>
+                        <ul class="dropdown-content">
+                            <li><a href="beef.html">Beef</a></li>
+                            <li><a href="chicken.html">Chicken</a></li>
+                            <li><a href="pork.html">Pork</a></li>
+                            <li><a href="lamb.html">Lamb</a></li>
+                        </ul>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="nav">
-            <a href="home.html">
-                <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
-            </a>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="dropdown">
-                    <a href="shop.html">SHOP</a>
-                    <ul class="dropdown-content">
-                        <li><a href="beef.html">Beef</a></li>
-                        <li><a href="chicken.html">Chicken</a></li>
-                        <li><a href="pork.html">Pork</a></li>
-                        <li><a href="lamb.html">Lamb</a></li>
-                    </ul>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
+        
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', function() {
+                document.querySelector('.nav ul').classList.toggle('active');
+            });
+        </script>
+        
     </div>
 
     <div class="content-wrapper">
         <div class="product-section2">
             <h1>POPULAR PRODUCTS</h1>
             <div class="slideshow-container">
-                <div class="mySlides active">
+                <div class="mySlides">
                     <div class="product-content">
                         <a href="product.html?id=1">
                             <img class="productimg" src="assets/imgs/boerewors.webp" alt="Boerewors">
@@ -152,19 +227,26 @@
         showSlides(slideIndex);
 
         function plusSlides(n) {
-            showSlides(slideIndex += n);
+            slideIndex += n;
+            showSlides(slideIndex);
         }
 
         function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            if (n >= slides.length) {slideIndex = 0}    
-            if (n < 0) {slideIndex = slides.length - 1}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
+            const slides = document.getElementsByClassName("mySlides");
+            if (n >= slides.length) {
+                slideIndex = 0;
             }
-            slides[slideIndex].classList.add("active");
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
         }
+
+        // Initialize the slideshow
+        showSlides(slideIndex);
     </script>
 </body>
 </html>

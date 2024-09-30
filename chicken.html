@@ -17,6 +17,14 @@
             <a href="home.html">
                 <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
             </a>
+            
+            <!-- Hamburger Icon for Mobile Navigation -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
             <ul>
                 <li><a href="home.html">HOME</a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -33,6 +41,14 @@
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </div>
+    </div>
+    
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav ul').classList.toggle('active');
+        });
+    </script>
+    
     </div>
 
     <div class="content-wrapper">

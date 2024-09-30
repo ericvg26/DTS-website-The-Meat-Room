@@ -5,56 +5,6 @@
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
-    <style>
-        .content-wrapper {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .product-section {
-            flex: 0 0 70%; /* Take 70% of the width */
-            max-width: 70%;
-            text-align: left;
-            margin-top: 50px; /* To move the section down from the nav */
-        }
-
-        
-        .product-section h2 {
-            position: relative;
-            bottom: -40px;
-            left: 75px;
-            font-size: 44px;
-            font-family: "lulo-one", sans-serif;
-            color: #c55b5b;
-        }
-
-        .sidebar {
-            flex: 0 0 25%; /* Take 25% of the width */
-            max-width: 25%;
-            padding-left: 40px;
-            background-color: #f4f4f4;
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        table {
-            margin-left: 0; /* Align the table to the left edge */
-        }
-
-        .product-table img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .product-table .text {
-            text-align: center;
-            padding: 15px 0;
-            font-size: 18px;
-        }
-    </style>
 </head>
 
 <body>
@@ -65,12 +15,20 @@
         </div>
         <div class="nav">
             <a href="home.html">
-                <img class="logoimg" src="assets/imgs/LOGO.png">
+                <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
             </a>
             <ul>
                 <li><a href="home.html">HOME</a></li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="shop.html">SHOP</a></li>
+                <li class="dropdown">
+                    <a href="shop.html">SHOP</a>
+                    <ul class="dropdown-content">
+                        <li><a href="beef.html">Beef</a></li>
+                        <li><a href="chicken.html">Chicken</a></li>
+                        <li><a href="pork.html">Pork</a></li>
+                        <li><a href="lamb.html">Lamb</a></li>
+                    </ul>
+                </li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -79,102 +37,95 @@
 
     <div class="content-wrapper">
         <div class="product-section">
-            <h2>BEEF PRODUCTS</h2>
+            <h1>BEEF PRODUCTS</h1>
+
+
             <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;">
                 <tr>
-                    <td>
+                    <td class="tablecontent">
                         <a href="product.html?id=1">
                             <img class="productimg" src="assets/imgs/boerewors.webp" alt="Boerewors">
                         </a>
                     </td>
-                    <td>
+                    <td class="tablecontent">
                         <a href="product.html?id=2">
                             <img class="productimg" src="assets/imgs/patties.webp" alt="Hamburger Patties">
                         </a>
                     </td>
-                    <td>
+                    <td class="tablecontent">
                         <a href="product.html?id=3">
                             <img class="productimg" src="assets/imgs/BeefSirloin.webp" alt="Sirloin Steak">
                         </a>
                     </td>
-                    <td>
-                        <a href="product.html?id=4">
-                            <img class="productimg" src="assets/imgs/ScotchFillet.webp" alt="Scotch Fillet Steak">
-                        </a>
-                    </td>
                 </tr>
                 <tr>
-                    <td class="text">Boerewors - $20.00 / 800gm</td>
-                    <td class="text">Hamburger patties - $15.00 / 4 per pack</td>
-                    <td class="text">Sirloin steak - $17.00 / 400gm</td>
-                    <td class="text">Scotch fillet steak - $26.00 / 500gm</td>
+                    <td class="tabletext1 tablecontent">Boerewors</td>
+                    <td class="tabletext1 tablecontent">Award winning hamburger patties</td>
+                    <td class="tabletext1 tablecontent">Angus sirloin steak</td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="tabletext2 tablecontent">$18.99 / 800gm | (multiple flavours)</td>
+                    <td class="tabletext2 tablecontent">$14.99 / 4 per pack</td>
+                    <td class="tabletext2 tablecontent">$18 / 400gm</td>
+                </tr>
+                <tr>
+                    <td class="tablecontent">
                         <a href="product.html?id=5">
-                            <img class="productimg" src="assets/imgs/Biltong.webp" alt="Beef Biltong">
+                            <img class="productimg" src="assets/imgs/Biltong.webp" alt="Beef biltong">
                         </a>
                     </td>
-                    <td>
-                        <a href="product.html?id=6">
-                            <img class="productimg" src="assets/imgs/chickenbreast.webp" alt="Chicken Breast">
+                    <td class="tablecontent">
+                        <a href="product.html?id=19">
+                            <img class="productimg" src="assets/imgs/beefeyefillet.webp" alt="Angus eye fillet">
                         </a>
                     </td>
-                    <td>
-                        <a href="product.html?id=7">
-                            <img class="productimg" src="assets/imgs/wholechicken.webp" alt="Whole Chicken">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=8">
-                            <img class="productimg" src="assets/imgs/drumstick.webp" alt="Chicken Drumstick">
+                    <td class="tablecontent"> 
+                        <a href="product.html?id=4">
+                            <img class="productimg" src="assets/imgs/ScotchFillet.webp" alt="Angus scotch fillet steak">
                         </a>
                     </td>
                 </tr>
                 <tr>
-                    <td class="text">Beef Biltong - $59.00 / kg</td>
-                    <td class="text">Chicken breast - $10.99 / 500gm</td>
-                    <td class="text">Whole chicken size 16 - $16.00</td>
-                    <td class="text">Chicken drumstick - $7.00 / 500gm</td>
+                    <td class="tabletext1 tablecontent">Beef biltong</td>
+                    <td class="tabletext1 tablecontent">Angus eye fillet</td>
+                    <td class="tabletext1 tablecontent">Angus scotch fillet steak</td>
                 </tr>
                 <tr>
-                    <td>
-                        <a href="product.html?id=9">
-                            <img class="productimg" src="assets/imgs/dryword.webp" alt="Dry Wors">
+                    <td class="tabletext2 tablecontent">$10+ | (custom cuts)</td>
+                    <td class="tabletext2 tablecontent">$26 / 2x200gm</td>
+                    <td class="tabletext2 tablecontent">$26 / 500gm</td>
+                </tr>
+                <tr>
+                    <td class="tablecontent">
+                        <a href="product.html?id=20">
+                            <img class="productimg" src="assets/imgs/beefrumpsteak.webp" alt="rump steak">
                         </a>
                     </td>
-                    <td>
-                        <a href="product.html?id=10">
-                            <img class="productimg" src="assets/imgs/lambrack.webp" alt="Lamb Rack">
+                    <td class="tablecontent">
+                        <a href="product.html?id=21">
+                            <img class="productimg" src="assets/imgs/beefwholerump.webp" alt="whole angus rump">
                         </a>
                     </td>
-                    <td>
-                        <a href="product.html?id=11">
-                            <img class="productimg" src="assets/imgs/ribs.webp" alt="Pork Ribs">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=12">
-                            <img class="productimg" src="assets/imgs/lambleg.webp" alt="Butterfly Lamb Leg">
+                    <td class="tablecontent">
+                        <a href="product.html?id=22">
+                            <img class="productimg" src="assets/imgs/beefwholescotchfillet.webp" alt="whole scotch fillet">
                         </a>
                     </td>
                 </tr>
                 <tr>
-                    <td class="text">Dry Wors - $62.99 / kg</td>
-                    <td class="text">Lamb rack - $26.50 / 500gm</td>
-                    <td class="text">Pork ribs - $20.00 / 1.2kg</td>
-                    <td class="text">Butterfly lamb leg - $25.50 / 700gm</td>
+                    <td class="tabletext1 tablecontent">Angus rump steak</td>
+                    <td class="tabletext1 tablecontent">Whole angus rump</td>
+                    <td class="tabletext1 tablecontent">Whole angus scotch fillet</td>
+                </tr>
+                <tr>
+                    <td class="tabletext2 tablecontent">$22 / 700gm</td>
+                    <td class="tabletext2 tablecontent">$90 / 3kg</td>
+                    <td class="tabletext2 tablecontent">$18.99 / whole | (multiple flavours)</td>
                 </tr>
             </table>
         </div>
 
-        <div class="sidebar">
-            <!-- Placeholder for hyperlinks or additional content -->
-            <p><a href="chicken.html">Chicken</a></p>
-            <p><a href="beef.html">Beef</a></p>
-            <p><a href="pork.html">Pork</a></p>
-            <!-- Add more content here -->
-        </div>
+      
     </div>
 
     <div class="footer">

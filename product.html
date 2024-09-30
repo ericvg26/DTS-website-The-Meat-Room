@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Meat Room - Product Details</title>
+    <script src="js/product.js" defer></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
+    <style>
+        .product-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .product-container h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #c55b5b;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .product-details {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .product-details .image {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-details .info {
+            flex: 2;
+            padding: 20px;
+        }
+        .product-details .info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+        }
+        .product-details .info p.price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c55b5b;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="top-bar">
+            <h1>The Meat Room</h1>
+            <h6>Premium butcher</h6>
+        </div>
+        <div class="nav">
+            <a href="home.html">
+                <!--This is for my logo-->
+                <img class="logoimg" src="assets\imgs\LOGO.png">
+            </a>
+            <!--This is for the navigation bar-->
+                <li>
+                    <a href="home.html">
+                        HOME
+                    </a>
+                </li>
+                <!--This is to space out between the hyper links-->
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li>
+                    <a href="shop.html">
+                        SHOP
+                    </a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li>
+                    <a href="contact.html">
+                        CONTACT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="product-container" id="product-detail-container">
+        <h2 id="product-name"></h2>
+        <div class="product-details">
+            <div class="image">
+                <img id="product-image" class="product-image" alt="Product Image">
+            </div>
+            <div class="info">
+                <p id="product-price" class="price"></p>
+                <p id="product-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Contact Info:</h2>
+        <p>Instagram - @Themeatroom</p>
+        <p>FaceBook - @Themeatroomnz</p>
+        <p>Twitter - @Themeatroomnz</p>
+        <p>Themeatroom@gmail.com | 0283969863 | 26 Anzac Road, Browns Bay</p>
+    </div>
+</body>
+</html>

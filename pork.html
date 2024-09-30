@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Meat Room</title>
+    <title>The Meat Room - Pork</title>
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
@@ -9,134 +9,53 @@
 
 <body>
     <div>
-        <div>
-            <div class="top-bar">
-                <h1>The Meat Room</h1>
-                <h6>Premium butcher</h6>
-            </div>
-            <div class="nav">
-                <a href="home.html">
-                    <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
-                </a>
-                
-                <!-- Hamburger Icon for Mobile Navigation -->
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                
-                <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="dropdown">
-                        <a href="shop.html">SHOP</a>
-                        <ul class="dropdown-content">
-                            <li><a href="beef.html">Beef</a></li>
-                            <li><a href="chicken.html">Chicken</a></li>
-                            <li><a href="pork.html">Pork</a></li>
-                            <li><a href="lamb.html">Lamb</a></li>
-                        </ul>
-                    </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </div>
+        <div class="top-bar">
+            <h1>The Meat Room</h1>
+            <h6>Premium butcher</h6>
         </div>
-        
-        <script>
-            document.querySelector('.hamburger').addEventListener('click', function() {
-                document.querySelector('.nav ul').classList.toggle('active');
-            });
-        </script>
-        
+        <div class="nav">
+            <a href="home.html">
+                <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
+            </a>
+            
+            <!-- Hamburger Icon for Mobile Navigation -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="dropdown">
+                    <a href="shop.html">SHOP</a>
+                    <ul class="dropdown-content">
+                        <li><a href="beef.html">Beef</a></li>
+                        <li><a href="chicken.html">Chicken</a></li>
+                        <li><a href="pork.html">Pork</a></li>
+                        <li><a href="lamb.html">Lamb</a></li>
+                    </ul>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
     </div>
+    
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav ul').classList.toggle('active');
+        });
+    </script>
 
     <div class="content-wrapper">
         <div class="product-section">
             <h1>PORK PRODUCTS</h1>
-            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;">
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=23">
-                            <img class="productimg" src="assets/imgs/porkbelly.webp" alt="Pork belly">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=24">
-                            <img class="productimg" src="assets/imgs/porkdicedscotch.webp" alt="Pork diced scotch">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=25">
-                            <img class="productimg" src="assets/imgs/porkloinchops.webp" alt="Pork loin chops">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Pork belly </td>
-                    <td class="tabletext1 tablecontent">Pork diced scotch</td>
-                    <td class="tabletext1 tablecontent">Pork loin chops</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$45 / 1.5kg</td>
-                    <td class="tabletext2 tablecontent">$12.99 / 500gm</td>
-                    <td class="tabletext2 tablecontent">$11.50 / 500gm</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=26">
-                            <img class="productimg" src="assets/imgs/porkscotchsteak.webp" alt="pork scotch steak">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=27">
-                            <img class="productimg" src="assets/imgs/porkscotchwhole.webp" alt="pork scotch whole">
-                        </a>
-                    </td>
-                    <td class="tablecontent"> 
-                        <a href="product.html?id=28">
-                            <img class="productimg" src="assets/imgs/porkshoulder.webp" alt="pork shoulder">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Pork scotch steak</td>
-                    <td class="tabletext1 tablecontent">Pork scotch whole</td>
-                    <td class="tabletext1 tablecontent">Boneless pork shoulder</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$10.99 / 400gm</td>
-                    <td class="tabletext2 tablecontent">$39.99 / 1.5kg</td>
-                    <td class="tabletext2 tablecontent">$47.50 / 2.5kg</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=11">
-                            <img class="productimg" src="assets/imgs/ribs.webp" alt="Pork Ribs">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                    
-                    </td>
-                    <td class="tablecontent">
-                       >
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Pork Ribs</td>
-                    <td class="tabletext1 tablecontent"></td>
-                    <td class="tabletext1 tablecontent"></td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$20.00 / 1.2kg</td>
-                    <td class="tabletext2 tablecontent"></td>
-                    <td class="tabletext2 tablecontent"></td>
-                </tr>
+            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;" id="pork-products">
+                <!-- Products will be dynamically inserted here -->
             </table>
         </div>
-
-      
     </div>
 
     <div class="footer">
@@ -146,5 +65,39 @@
         <p>Twitter - @Themeatroomnz</p>
         <p>Themeatroom@gmail.com | 0283969863 | 26 Anzac Road, Browns Bay</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('fetch_pork_products.php')
+                .then(response => response.json())
+                .then(products => {
+                    const table = document.getElementById('pork-products');
+
+                    let rowIndex = 0;
+                    let row;
+                    
+                    Object.entries(products).forEach(([id, product], index) => {
+                        if (index % 3 === 0) {
+                            row = document.createElement('tr');
+                            table.appendChild(row);
+                        }
+
+                        const cell = document.createElement('td');
+                        cell.className = 'tablecontent';
+
+                        cell.innerHTML = `
+                            <a href="product.html?id=${id}">
+                                <img class="productimg" src="${product.image}" alt="${product.name}">
+                            </a>
+                            <div class="tabletext1 tablecontent">${product.name}</div>
+                            <div class="tabletext2 tablecontent">${product.price_description}</div>
+                        `;
+
+                        row.appendChild(cell);
+                    });
+                })
+                .catch(error => console.error('Error fetching pork products:', error));
+        });
+    </script>
 </body>
 </html>

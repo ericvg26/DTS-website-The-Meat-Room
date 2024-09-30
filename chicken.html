@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>The Meat Room</title>
-        <script src="js/javascript.js" defer></script>
-        <link rel="stylesheet" href="css/stylesheet.css">
-        <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
+    <title>The Meat Room - Chicken</title>
+    <script src="js/javascript.js" defer></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
 </head>
 
 <body>
@@ -48,98 +48,14 @@
             document.querySelector('.nav ul').classList.toggle('active');
         });
     </script>
-    
-    </div>
 
     <div class="content-wrapper">
         <div class="product-section">
             <h1>CHICKEN PRODUCTS</h1>
-            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;">
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=13">
-                            <img class="productimg" src="assets/imgs/chcikennibbles.webp" alt="chcikennibbles">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=6">
-                            <img class="productimg" src="assets/imgs/chickenbreast.webp" alt="chickenbreast">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=14">
-                            <img class="productimg" src="assets/imgs/chickenbutterfly.webp" alt="chickenbutterfly">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Chicken nibbles</td>
-                    <td class="tabletext1 tablecontent">Free range chicken breast</td>
-                    <td class="tabletext1 tablecontent">Butterfly chicken</td>
-                    
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$9.99 / per pack | (multiple flavours) </td>
-                    <td class="tabletext2 tablecontent">$11.99 / 500gm | (multiple flavours)</td>
-                    <td class="tabletext2 tablecontent">$18.99 / whole | (multiple flavours)</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=15">
-                            <img class="productimg" src="assets/imgs/chickenmince.webp" alt="Chicken Mince">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=16">
-                            <img class="productimg" src="assets/imgs/chickenthighskinon.webp" alt="Chicken Thigh">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=7">
-                            <img class="productimg" src="assets/imgs/wholechicken.webp" alt="Whole Chicken">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Free range chicken mince</td>
-                    <td class="tabletext1 tablecontent">Free range chicken thigh skin on</td>
-                    <td class="tabletext1 tablecontent">Free range whole chicken</td>
-                    
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$10.99 / 500gm | (frozen)</td>
-                    <td class="tabletext2 tablecontent">$11.99 / 500gm</td>
-                    <td class="tabletext2 tablecontent">$18.99 / size 16</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=17">
-                            <img class="productimg" src="assets/imgs/chickendiced.webp" alt="Dry Wors">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=18">
-                            <img class="productimg" src="assets/imgs/chickenthighskinless.webp" alt="Scotch Fillet Steak">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=8">
-                            <img class="productimg" src="assets/imgs/drumstick.webp" alt="Chicken Drumstick">
-                        </a>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Free range diced chicken</td>
-                    <td class="tabletext1 tablecontent">Free range skinless chicken thigh</td>
-                    <td class="tabletext1 tablecontent">Free range chicken drumstick</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$11.99 / 500gm</td>
-                    <td class="tabletext2 tablecontent">$12.99 / 500gm</td>
-                    <td class="tabletext2 tablecontent  ">$5.99 / 500gm</td>
-                </tr>
+            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;" id="chicken-products">
+                <!-- Products will be dynamically inserted here -->
             </table>
         </div>
-
     </div>
 
     <div class="footer">
@@ -149,5 +65,39 @@
         <p>Twitter - @Themeatroomnz</p>
         <p>Themeatroom@gmail.com | 0283969863 | 26 Anzac Road, Browns Bay</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('fetch_chicken_products.php')
+                .then(response => response.json())
+                .then(products => {
+                    const table = document.getElementById('chicken-products');
+
+                    let rowIndex = 0;
+                    let row;
+                    
+                    Object.entries(products).forEach(([id, product], index) => {
+                        if (index % 3 === 0) {
+                            row = document.createElement('tr');
+                            table.appendChild(row);
+                        }
+
+                        const cell = document.createElement('td');
+                        cell.className = 'tablecontent';
+
+                        cell.innerHTML = `
+                            <a href="product.html?id=${id}">
+                                <img class="productimg" src="${product.image}" alt="${product.name}">
+                            </a>
+                            <div class="tabletext1 tablecontent">${product.name}</div>
+                            <div class="tabletext2 tablecontent">${product.price_description}</div>
+                        `;
+
+                        row.appendChild(cell);
+                    });
+                })
+                .catch(error => console.error('Error fetching chicken products:', error));
+        });
+    </script>
 </body>
 </html>

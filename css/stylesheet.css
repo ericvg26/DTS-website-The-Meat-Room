@@ -188,10 +188,11 @@ table {
 	object-fit: cover;
 	width:250px;
 	height:250px;
-	border:1px solid #c55b5b;
+	/* border:1px solid #c55b5b;  */
     margin:0px;
-    padding:15px;
+    padding:5px;
 }
+
 .text {
 	color:rgb(255, 255, 255);
     padding-top: 10px;
@@ -262,3 +263,75 @@ div {
     margin-bottom: 20px;
 }
 
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-section {
+    flex: 0 0 70%; /* Take 70% of the width */
+    max-width: 70%;
+    text-align: left;
+    margin-top: 50px; /* To move the section down from the nav */
+}
+
+
+.product-section h2 {
+    position: relative;
+    bottom: -40px;
+    left: 75px;
+    font-size: 44px;
+    font-family: "lulo-one", sans-serif;
+    color: #ffffff;
+}
+
+.sidebar {
+    flex: 0 0 25%; /* Take 25% of the width */
+    max-width: 25%;
+    padding-left: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+table {
+    margin-left: 0; /* Align the table to the left edge */
+}
+
+.product-table img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-table .text {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+}
+
+.tabletext1 {
+	color:rgb(255, 255, 255);
+    padding-top: 2px;
+    padding-bottom:2px;
+    text-align: left;
+    vertical-align: middle;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.tabletext2 {
+	color:rgb(196, 196, 196);
+    padding-top: 2px;
+    padding-bottom:7px;
+    text-align: left;
+    vertical-align: middle;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tablecontent {
+    padding-left: 25px;
+    padding-right: 25px;
+
+}

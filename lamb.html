@@ -9,30 +9,47 @@
 
 <body>
     <div>
-        <div class="top-bar">
-            <h1>The Meat Room</h1>
-            <h6>Premium butcher</h6>
+        <div>
+            <div class="top-bar">
+                <h1>The Meat Room</h1>
+                <h6>Premium butcher</h6>
+            </div>
+            <div class="nav">
+                <a href="home.html">
+                    <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
+                </a>
+                
+                <!-- Hamburger Icon for Mobile Navigation -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="dropdown">
+                        <a href="shop.html">SHOP</a>
+                        <ul class="dropdown-content">
+                            <li><a href="beef.html">Beef</a></li>
+                            <li><a href="chicken.html">Chicken</a></li>
+                            <li><a href="pork.html">Pork</a></li>
+                            <li><a href="lamb.html">Lamb</a></li>
+                        </ul>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="nav">
-            <a href="home.html">
-                <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
-            </a>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="dropdown">
-                    <a href="shop.html">SHOP</a>
-                    <ul class="dropdown-content">
-                        <li><a href="beef.html">Beef</a></li>
-                        <li><a href="chicken.html">Chicken</a></li>
-                        <li><a href="pork.html">Pork</a></li>
-                        <li><a href="lamb.html">Lamb</a></li>
-                    </ul>
-                </li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
+        
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', function() {
+                document.querySelector('.nav ul').classList.toggle('active');
+            });
+        </script>
+        
     </div>
 
     <div class="content-wrapper">

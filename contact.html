@@ -6,24 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
-    <div>
-        <div class="top-bar">
-            <h1>The Meat Room</h1>
-            <h6>Premium butcher</h6>
-        </div>
-        <div class="nav">
-            <a href="home.html">
-                <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
-            </a>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="shop.html">SHOP</a></li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-    </div>
     <style>
         body, html {
             margin: 0;
@@ -107,6 +89,9 @@
             top: -80px;
             left: 200px;
             z-index: 9999;
+            max-width: 20%;
+            height: auto;
+            transition: max-width 0.3s ease-in-out;
         }
 
         .content {
@@ -206,9 +191,42 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        @media (max-width: 768px) {
+            .logoimg {
+                left: 20px;
+                top: -60px;
+                max-width: 30%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logoimg {
+                left: 10px;
+                top: -50px;
+                max-width: 40%;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <h1>The Meat Room</h1>
+        <h6>Premium butcher</h6>
+    </div>
+    <div class="nav">
+        <a href="home.html">
+            <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
+        </a>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="shop.html">SHOP</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    
     <div class="content">
         <!-- Top Section: Image -->
         <div class="top-image"></div>

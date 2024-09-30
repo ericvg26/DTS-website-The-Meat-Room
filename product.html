@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Meat Room - Product Details</title>
-    <script src="js/product.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
     <style>
+        /* Styles for the product details container */
         .product-container {
             max-width: 1000px;
             margin: 40px auto;
@@ -18,6 +18,7 @@
             overflow: hidden;
         }
 
+        /* Styling the product title */
         .product-container h2 {
             text-align: center;
             font-size: 36px;
@@ -25,6 +26,7 @@
             margin-bottom: 30px;
         }
 
+        /* Layout for product details */
         .product-details {
             display: flex;
             flex-direction: column;
@@ -32,6 +34,7 @@
             gap: 20px;
         }
 
+        /* Styling for the product image */
         .product-image {
             max-width: 100%;
             height: auto;
@@ -40,10 +43,12 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
+        /* Hover effect on product image */
         .product-image:hover {
             transform: scale(1.05);
         }
 
+        /* Styling for the product information */
         .info {
             text-align: center;
         }
@@ -55,6 +60,7 @@
             margin: 10px 0;
         }
 
+        /* Styling for the product price */
         .info p.price {
             font-size: 28px;
             font-weight: bold;
@@ -62,6 +68,7 @@
             margin-bottom: 20px;
         }
 
+        /* Footer styles */
         .footer {
             background-color: #222;
             color: #b4b4b4;
@@ -77,6 +84,7 @@
             margin-bottom: 20px;
         }
 
+        /* Styling for the recommended products section */
         .recommendations {
             margin-top: 50px;
             padding: 20px;
@@ -92,41 +100,48 @@
             margin-bottom: 20px;
         }
 
+        /* Layout for the recommended products, responsive for different screen sizes */
         .recommended-products {
-            display: flex;
-            justify-content: space-around;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
 
+        /* Styling for each recommended product */
         .recommended-product {
-            max-width: 30%;
             text-align: center;
         }
 
+        /* Styling for the images of recommended products, ensuring uniform size */
         .recommended-product img {
             width: 100%;
+            max-width: 300px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
         }
 
+        /* Hover effect on recommended product images */
         .recommended-product img:hover {
             transform: scale(1.05);
         }
 
+        /* Styling for the text below recommended product images */
         .recommended-product p {
             font-size: 16px;
             color: #ddd;
             margin-top: 10px;
         }
 
+        /* Styling for the price text below recommended product images */
         .recommended-product .price {
             font-size: 14px;
             color: #c55b5b;
             margin-top: 5px;
         }
 
+        /* Responsive styles for larger screens */
         @media (min-width: 768px) {
             .product-details {
                 flex-direction: row;
@@ -147,6 +162,7 @@
             }
         }
 
+        /* Responsive styles for smaller screens */
         @media (max-width: 767px) {
             .product-container {
                 padding: 15px;
@@ -158,7 +174,6 @@
         }
     </style>
 </head>
-
 <body>
     <div>
         <div class="top-bar">
@@ -201,95 +216,54 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
+            // Get the product ID from the URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get('id');
 
-            const products = [
-                { id: 1, name: "Boerewors", price: "$20.00 / 800gm", description: "Traditional South African sausage made with a blend of spices.", image: "assets/imgs/boerewors.webp" },
-                { id: 2, name: "Hamburger Patties", price: "$15.00 / 4 per pack", description: "Juicy and flavorful hamburger patties made from premium beef.", image: "assets/imgs/patties.webp" },
-                { id: 3, name: "Sirloin Steak", price: "$17.00 / 400gm", description: "Tender and juicy sirloin steak, perfect for grilling.", image: "assets/imgs/BeefSirloin.webp" },
-                { id: 4, name: "Scotch Fillet Steak", price: "$26.00 / 500gm", description: "Rich and flavorful scotch fillet steak.", image: "assets/imgs/ScotchFillet.webp" },
-                { id: 5, name: "Beef Biltong", price: "$59.00 / kg", description: "Traditional South African dried meat snack.", image: "assets/imgs/Biltong.webp" },
-                { id: 6, name: "Chicken Breast", price: "$10.99 / 500gm", description: "Fresh and tender chicken breast.", image: "assets/imgs/chickenbreast.webp" },
-                { id: 7, name: "Whole Chicken", price: "$16.00", description: "Whole chicken, perfect for roasting. NZ free range size 16 chicken.", image: "assets/imgs/wholechicken.webp" },
-                { id: 8, name: "Chicken Drumstick", price: "$7.00 / 500gm", description: "Juicy and flavorful chicken drumsticks.", image: "assets/imgs/drumstick.webp" },
-                { id: 9, name: "Dry Wors", price: "$62.99 / kg", description: "Traditional South African dried sausage.", image: "assets/imgs/dryword.webp" },
-                { id: 10, name: "Lamb Rack", price: "$26.50 / 500gm", description: "Tender and flavorful lamb rack.", image: "assets/imgs/lambrack.webp" },
-                { id: 11, name: "Pork Ribs", price: "$20.00 / 1.2kg", description: "Succulent pork ribs, perfect for BBQ.", image: "assets/imgs/ribs.webp" },
-                { id: 12, name: "Butterfly Lamb Leg", price: "$25.50 / 700gm", description: "Butterflied lamb leg, ready for grilling.", image: "assets/imgs/lambbutterflyleg.webp" },
-                { id: 13, name: "Chicken Nibbles", price: "$9.99 / per pack", description: "NZ Free range chicken nibbles. Choice of flavours available. 800gms per pack.", image: "assets/imgs/chcikennibbles.webp" },
-                { id: 14, name: "Butterfly Chicken", price: "$9.99 / per pack", description: "NZ Free range butterfly chicken. Choice of flavours available.", image: "assets/imgs/chickenbutterfly.webp" },
-                { id: 15, name: "Chicken Mince", price: "$10.99 / 500gm", description: "Free Range NZ frozen chicken mince | 500gm.", image: "assets/imgs/chickenmince.webp" },
-                { id: 16, name: "Chicken Thigh Skin-on", price: "$11.99 / 500gm", description: "NZ Free range chicken thigh skin on, boneless | 500gm.", image: "assets/imgs/chickenthighskinon.webp" },
-                { id: 17, name: "Diced Chicken", price: "$11.99 / 500gm", description: "NZ Free range chicken diced. 500gm.", image: "assets/imgs/chickendiced.webp" },
-                { id: 18, name: "Skinless Chicken Thigh", price: "$12.99 / 500gm", description: "NZ Free range chicken thigh skinless, boneless | 500gm.", image: "assets/imgs/chickenthighskinless.webp" },
-                { id: 19, name: "Angus Eye Fillet Steak", price: "$26 / 2 x 200gm", description: "Angus eye fillet steak - 2 x 200gm portions.", image: "assets/imgs/beefeyefillet.webp" },
-                { id: 20, name: "Angus Rump Steak", price: "$22 / 700gm", description: "Angus rump steak - 700gm. Born and raised in New Zealand.", image: "assets/imgs/beefrumpsteak.webp" },
-                { id: 21, name: "Whole Angus Rump", price: "$90 / 3kg", description: "Whole Angus rump - 3kg Born and raised in New Zealand.", image: "assets/imgs/beefwholerump.webp" },
-                { id: 22, name: "Whole Angus Scotch Fillet", price: "$105 / 2kg", description: "Whole Angus scotch fillet - 2kg Born and raised in New Zealand.", image: "assets/imgs/beefwholescotchfillet.webp" },
-                { id: 23, name: "Pork Belly", price: "$45 / 1.5kg", description: "NZ Pork Belly - 1.5kg Bone in, Skin on.", image: "assets/imgs/porkbelly.webp" },
-                { id: 24, name: "Pork Diced Scotch", price: "$12.99 / 500gm", description: "NZ Diced Pork Scotch - 500gm.", image: "assets/imgs/porkdicedscotch.webp" },
-                { id: 25, name: "Pork Loin Chops", price: "$11.50 / 500gm", description: "NZ Pork Loin Chops - 500gm.", image: "assets/imgs/porkloinchops.webp" },
-                { id: 26, name: "Pork Scotch Steak", price: "$10.99 / 400gm", description: "NZ Pork Scotch - 400gm (2 portions).", image: "assets/imgs/porkscotchsteak.webp" },
-                { id: 27, name: "Pork Scotch Whole", price: "$39.99 / 1.5kg", description: "NZ Pork Butt (Scotch) - 1.5kg.", image: "assets/imgs/porkscotchwhole.webp" },
-                { id: 28, name: "Boneless Pork Shoulder", price: "$47.50 / 2.5kg", description: "NZ Boned Rolled Pork Shoulder - 2.5kg Skin on.", image: "assets/imgs/porkshoulder.webp" },
-                { id: 29, name: "Lamb Shanks", price: "$22.99 / 800gm", description: "Lamb Shanks - 800gms (pack of 2 shanks) Born and raised in New Zealand.", image: "assets/imgs/lambshanks.webp" },
-                { id: 30, name: "Lamb Mince", price: "$17.50 / 500gm", description: "Lamb Mince - 500gm Born and raised in New Zealand.", image: "assets/imgs/lambmince.webp" },
-                { id: 31, name: "Whole Lamb Rib", price: "$18.99 / 1kg", description: "Whole Lamb rib - 1kg Born and raised in New Zealand.", image: "assets/imgs/lambwholerib.webp" },
-                { id: 32, name: "Whole Lamb Shoulder", price: "$40 / 2kg", description: "Whole Lamb Shoulder - 2kg Bone In Born and raised in New Zealand.", image: "assets/imgs/lambwholeshoulder.webp" },
-                { id: 33, name: "Leg of Lamb", price: "$44 / 2kg", description: "Whole leg of Lamb, bone in - 2kg  Bone In Born and raised in New Zealand.", image: "assets/imgs/lambleg.webp" },
-                { id: 34, name: "Lamb Loin Chops", price: "$17.50 / 500gm", description: "Lamb Loin Chops - 500gm.  Born and raised in New Zealand.", image: "assets/imgs/lambloinchops.webp" }
-            ];
+            if (productId) {
+                // Fetch product and recommendation data from the server using the product ID
+                fetch(`fetch_product.php?id=${productId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const product = data.product;
+                        const recommendations = data.recommendations;
 
-            const product = products.find(p => p.id == productId);
-            if (product) {
-                document.getElementById('product-name').textContent = product.name;
-                document.getElementById('product-image').src = product.image;
-                document.getElementById('product-image').alt = product.name;
-                document.getElementById('product-price').textContent = product.price;
-                document.getElementById('product-description').textContent = product.description;
+                        // If the product exists, populate the product details section
+                        if (product) {
+                            document.getElementById('product-name').textContent = product.name;
+                            document.getElementById('product-image').src = product.image;
+                            document.getElementById('product-image').alt = product.name;
+                            document.getElementById('product-price').textContent = product.price;
+                            document.getElementById('product-description').textContent = product.description;
+                        } else {
+                            // If the product is not found, display a message
+                            document.getElementById('product-detail-container').innerHTML = `<p>Product not found.</p>`;
+                        }
+
+                        // Populate the recommended products section
+                        const recommendedProductsContainer = document.getElementById('recommended-products');
+                        recommendedProductsContainer.innerHTML = '';
+
+                        // Loop through recommendations and create HTML for each recommended product
+                        recommendations.forEach(product => {
+                            const productElement = `
+                                <div class="recommended-product">
+                                    <a href="product.html?id=${product.product_id}">
+                                        <img src="${product.image}" alt="${product.name}">
+                                        <p>${product.name}</p>
+                                        <p class="price">${product.price}</p>
+                                    </a>
+                                </div>
+                            `;
+                            recommendedProductsContainer.innerHTML += productElement;
+                        });
+                    })
+                    .catch(error => console.error('Error fetching product data:', error));
             }
-
-            // Array of products for recommendations
-            const recommendedProducts = [
-                { id: 1, name: "Boerewors", price: "$20.00 / 800gm", image: "assets/imgs/boerewors.webp", link: "product.html?id=1" },
-                { id: 2, name: "Hamburger Patties", price: "$15.00 / 4 per pack", image: "assets/imgs/patties.webp", link: "product.html?id=2" },
-                { id: 3, name: "Sirloin Steak", price: "$17.00 / 400gm", image: "assets/imgs/BeefSirloin.webp", link: "product.html?id=3" },
-                { id: 4, name: "Scotch Fillet Steak", price: "$26.00 / 500gm", image: "assets/imgs/ScotchFillet.webp", link: "product.html?id=4" },
-                { id: 5, name: "Beef Biltong", price: "$59.00 / kg", image: "assets/imgs/Biltong.webp", link: "product.html?id=5" },
-                { id: 6, name: "Chicken Breast", price: "$10.99 / 500gm", image: "assets/imgs/chickenbreast.webp", link: "product.html?id=6" },
-                { id: 7, name: "Whole Chicken", price: "$16.00", image: "assets/imgs/wholechicken.webp", link: "product.html?id=7" },
-                { id: 8, name: "Chicken Drumstick", price: "$7.00 / 500gm", image: "assets/imgs/drumstick.webp", link: "product.html?id=8" },
-                { id: 9, name: "Dry Wors", price: "$62.99 / kg", image: "assets/imgs/dryword.webp", link: "product.html?id=9" },
-                { id: 10, name: "Lamb Rack", price: "$26.50 / 500gm", image: "assets/imgs/lambrack.webp", link: "product.html?id=10" }
-                
-            ];
-
-            // Get current product name (assuming product name is in the h2 with id "product-name")
-            const currentProductName = document.getElementById('product-name').innerText;
-
-            // Filter out the current product and get three random recommended products
-            const recommended = recommendedProducts.filter(p => p.name !== currentProductName)
-                                                   .sort(() => 0.5 - Math.random())
-                                                   .slice(0, 3);
-
-            // Populate the recommendations section
-            const recommendedProductsContainer = document.getElementById('recommended-products');
-            recommended.forEach(product => {
-                const productElement = `
-                    <div class="recommended-product">
-                        <a href="${product.link}">
-                            <img src="${product.image}" alt="${product.name}">
-                            <p>${product.name}</p>
-                            <p class="price">${product.price}</p>
-                        </a>
-                    </div>
-                `;
-                recommendedProductsContainer.innerHTML += productElement;
-            });
         });
     </script>
 
+    <!-- Container for displaying the product details -->
     <div class="product-container" id="product-detail-container">
         <h2 id="product-name"></h2>
         <div class="product-details">
@@ -303,6 +277,7 @@
         </div>
     </div>
    
+    <!-- Container for displaying recommended products -->
     <div class="recommendations">
         <h3>You may also like:</h3>
         <div class="recommended-products" id="recommended-products">

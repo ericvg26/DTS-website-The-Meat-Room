@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Meat Room</title>
+    <title>The Meat Room - Lamb</title>
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
@@ -9,132 +9,53 @@
 
 <body>
     <div>
-        <div>
-            <div class="top-bar">
-                <h1>The Meat Room</h1>
-                <h6>Premium butcher</h6>
-            </div>
-            <div class="nav">
-                <a href="home.html">
-                    <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
-                </a>
-                
-                <!-- Hamburger Icon for Mobile Navigation -->
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                
-                <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <li class="dropdown">
-                        <a href="shop.html">SHOP</a>
-                        <ul class="dropdown-content">
-                            <li><a href="beef.html">Beef</a></li>
-                            <li><a href="chicken.html">Chicken</a></li>
-                            <li><a href="pork.html">Pork</a></li>
-                            <li><a href="lamb.html">Lamb</a></li>
-                        </ul>
-                    </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </div>
+        <div class="top-bar">
+            <h1>The Meat Room</h1>
+            <h6>Premium butcher</h6>
         </div>
-        
-        <script>
-            document.querySelector('.hamburger').addEventListener('click', function() {
-                document.querySelector('.nav ul').classList.toggle('active');
-            });
-        </script>
-        
+        <div class="nav">
+            <a href="home.html">
+                <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
+            </a>
+            
+            <!-- Hamburger Icon for Mobile Navigation -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="dropdown">
+                    <a href="shop.html">SHOP</a>
+                    <ul class="dropdown-content">
+                        <li><a href="beef.html">Beef</a></li>
+                        <li><a href="chicken.html">Chicken</a></li>
+                        <li><a href="pork.html">Pork</a></li>
+                        <li><a href="lamb.html">Lamb</a></li>
+                    </ul>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
     </div>
+    
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav ul').classList.toggle('active');
+        });
+    </script>
 
     <div class="content-wrapper">
         <div class="product-section">
             <h1>LAMB PRODUCTS</h1>
-            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;">
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=10">
-                            <img class="productimg" src="assets/imgs/lambrack.webp" alt="Lamb rack">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=12">
-                            <img class="productimg" src="assets/imgs/lambbutterflyleg.webp" alt="Butterfly lamb leg">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=29">
-                            <img class="productimg" src="assets/imgs/lambshanks.webp" alt="Lamb shanks">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Lamb rack</td>
-                    <td class="tabletext1 tablecontent">Butterfly lamb leg</td>
-                    <td class="tabletext1 tablecontent">Lamb shanks</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$26.50 / 500gm</td>
-                    <td class="tabletext2 tablecontent">$24 / 700gm</td>
-                    <td class="tabletext2 tablecontent">$22.99 / 800gm</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=30">
-                            <img class="productimg" src="assets/imgs/lambmince.webp" alt="Lamb mince">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=31">
-                            <img class="productimg" src="assets/imgs/lambwholerib.webp" alt="Lamb whole rib">
-                        </a>
-                    </td>
-                    <td class="tablecontent"> 
-                        <a href="product.html?id=32">
-                            <img class="productimg" src="assets/imgs/lambwholeshoulder.webp" alt="Lamb whole shoulder">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Lamb mince</td>
-                    <td class="tabletext1 tablecontent">Whole lamb rib</td>
-                    <td class="tabletext1 tablecontent">Whole lamb shoulder</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$17.50 / 500gm</td>
-                    <td class="tabletext2 tablecontent">$18.99 / 1kg</td>
-                    <td class="tabletext2 tablecontent">$40 / 2kg</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=33">
-                            <img class="productimg" src="assets/imgs/Lambleg.webp" alt="Lamb leg">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=34">
-                            <img class="productimg" src="assets/imgs/lambloinchops.webp" alt="Lamb loin chops">
-                        </a>
-                    </td>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Leg of lamb</td>
-                    <td class="tabletext1 tablecontent">Lamb loin chops</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$44 / 2kg</td>
-                    <td class="tabletext2 tablecontent">$17.50 / 500gm</td>
-                </tr>
+            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;" id="lamb-products">
+                <!-- Products will be dynamically inserted here -->
             </table>
         </div>
-
-      
     </div>
 
     <div class="footer">
@@ -144,5 +65,39 @@
         <p>Twitter - @Themeatroomnz</p>
         <p>Themeatroom@gmail.com | 0283969863 | 26 Anzac Road, Browns Bay</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('fetch_lamb_products.php')
+                .then(response => response.json())
+                .then(products => {
+                    const table = document.getElementById('lamb-products');
+
+                    let rowIndex = 0;
+                    let row;
+                    
+                    Object.entries(products).forEach(([id, product], index) => {
+                        if (index % 3 === 0) {
+                            row = document.createElement('tr');
+                            table.appendChild(row);
+                        }
+
+                        const cell = document.createElement('td');
+                        cell.className = 'tablecontent';
+
+                        cell.innerHTML = `
+                            <a href="product.html?id=${id}">
+                                <img class="productimg" src="${product.image}" alt="${product.name}">
+                            </a>
+                            <div class="tabletext1 tablecontent">${product.name}</div>
+                            <div class="tabletext2 tablecontent">${product.price_description}</div>
+                        `;
+
+                        row.appendChild(cell);
+                    });
+                })
+                .catch(error => console.error('Error fetching lamb products:', error));
+        });
+    </script>
 </body>
 </html>

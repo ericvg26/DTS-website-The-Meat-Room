@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Meat Room</title>
+    <title>The Meat Room - Beef</title>
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
@@ -48,100 +48,15 @@
             document.querySelector('.nav ul').classList.toggle('active');
         });
     </script>
-    
-    </div>
 
     <div class="content-wrapper">
         <div class="product-section">
             <h1>BEEF PRODUCTS</h1>
 
-
-            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;">
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=1">
-                            <img class="productimg" src="assets/imgs/boerewors.webp" alt="Boerewors">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=2">
-                            <img class="productimg" src="assets/imgs/patties.webp" alt="Hamburger Patties">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=3">
-                            <img class="productimg" src="assets/imgs/BeefSirloin.webp" alt="Sirloin Steak">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Boerewors</td>
-                    <td class="tabletext1 tablecontent">Award winning hamburger patties</td>
-                    <td class="tabletext1 tablecontent">Angus sirloin steak</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$18.99 / 800gm | (multiple flavours)</td>
-                    <td class="tabletext2 tablecontent">$14.99 / 4 per pack</td>
-                    <td class="tabletext2 tablecontent">$18 / 400gm</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=5">
-                            <img class="productimg" src="assets/imgs/Biltong.webp" alt="Beef biltong">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=19">
-                            <img class="productimg" src="assets/imgs/beefeyefillet.webp" alt="Angus eye fillet">
-                        </a>
-                    </td>
-                    <td class="tablecontent"> 
-                        <a href="product.html?id=4">
-                            <img class="productimg" src="assets/imgs/ScotchFillet.webp" alt="Angus scotch fillet steak">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Beef biltong</td>
-                    <td class="tabletext1 tablecontent">Angus eye fillet</td>
-                    <td class="tabletext1 tablecontent">Angus scotch fillet steak</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$10+ | (custom cuts)</td>
-                    <td class="tabletext2 tablecontent">$26 / 2x200gm</td>
-                    <td class="tabletext2 tablecontent">$26 / 500gm</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
-                        <a href="product.html?id=20">
-                            <img class="productimg" src="assets/imgs/beefrumpsteak.webp" alt="rump steak">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=21">
-                            <img class="productimg" src="assets/imgs/beefwholerump.webp" alt="whole angus rump">
-                        </a>
-                    </td>
-                    <td class="tablecontent">
-                        <a href="product.html?id=22">
-                            <img class="productimg" src="assets/imgs/beefwholescotchfillet.webp" alt="whole scotch fillet">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Angus rump steak</td>
-                    <td class="tabletext1 tablecontent">Whole angus rump</td>
-                    <td class="tabletext1 tablecontent">Whole angus scotch fillet</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$22 / 700gm</td>
-                    <td class="tabletext2 tablecontent">$90 / 3kg</td>
-                    <td class="tabletext2 tablecontent">$18.99 / whole | (multiple flavours)</td>
-                </tr>
+            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;" id="beef-products">
+                <!-- Products will be dynamically inserted here -->
             </table>
         </div>
-
-      
     </div>
 
     <div class="footer">
@@ -151,5 +66,39 @@
         <p>Twitter - @Themeatroomnz</p>
         <p>Themeatroom@gmail.com | 0283969863 | 26 Anzac Road, Browns Bay</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('fetch_beef_products.php')
+                .then(response => response.json())
+                .then(products => {
+                    const table = document.getElementById('beef-products');
+
+                    let rowIndex = 0;
+                    let row;
+                    
+                    Object.entries(products).forEach(([id, product], index) => {
+                        if (index % 3 === 0) {
+                            row = document.createElement('tr');
+                            table.appendChild(row);
+                        }
+
+                        const cell = document.createElement('td');
+                        cell.className = 'tablecontent';
+
+                        cell.innerHTML = `
+                            <a href="product.html?id=${id}">
+                                <img class="productimg" src="${product.image}" alt="${product.name}">
+                            </a>
+                            <div class="tabletext1 tablecontent">${product.name}</div>
+                            <div class="tabletext2 tablecontent">${product.price_description}</div>
+                        `;
+
+                        row.appendChild(cell);
+                    });
+                })
+                .catch(error => console.error('Error fetching beef products:', error));
+        });
+    </script>
 </body>
 </html>

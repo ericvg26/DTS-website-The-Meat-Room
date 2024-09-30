@@ -5,150 +5,138 @@
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
-    
 </head>
-
-
-<!-- MAKE A SCROLLING BAR OF PRODUCTS -->
-
 
 <body>
     <div>
-    <div class="top-bar">
-        <h1>The Meat Room</h1>
-        <h6>Premium butcher</h6>
+        <div class="top-bar">
+            <h1>The Meat Room</h1>
+            <h6>Premium butcher</h6>
+        </div>
+        <div class="nav">
+            <a href="home.html">
+                <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
+            </a>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="dropdown">
+                    <a href="shop.html">SHOP</a>
+                    <ul class="dropdown-content">
+                        <li><a href="beef.html">Beef</a></li>
+                        <li><a href="chicken.html">Chicken</a></li>
+                        <li><a href="pork.html">Pork</a></li>
+                        <li><a href="lamb.html">Lamb</a></li>
+                    </ul>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="nav">
-        <a href="home.html">
-            <img class="logoimg" src="assets/imgs/LOGO.png" alt="Logo">
-        </a>
-        <ul>
-            <li><a href="home.html">HOME</a></li>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <li class="dropdown">
-                <a href="shop.html">SHOP</a>
-                <ul class="dropdown-content">
-                    <li><a href="beef.html">Beef</a></li>
-                    <li><a href="chicken.html">Chicken</a></li>
-                    <li><a href="pork.html">Pork</a></li>
-                    <li><a href="lamb.html">Lamb</a></li>
-                </ul>
-            </li>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
-    </div>
-</div>
 
     <div class="content-wrapper">
         <div class="product-section2">
             <h1>POPULAR PRODUCTS</h1>
-            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;">
-                <tr>
-                    <td class="tablecontent">
+            <div class="slideshow-container">
+                <div class="mySlides active">
+                    <div class="product-content">
                         <a href="product.html?id=1">
                             <img class="productimg" src="assets/imgs/boerewors.webp" alt="Boerewors">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Boerewors</div>
+                        <div class="tabletext2">$18.99 / 800gm | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=2">
                             <img class="productimg" src="assets/imgs/patties.webp" alt="Hamburger Patties">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Award winning hamburger patties</div>
+                        <div class="tabletext2">$14.99 / 4 per pack</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=3">
                             <img class="productimg" src="assets/imgs/BeefSirloin.webp" alt="Sirloin Steak">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Angus sirloin steak</div>
+                        <div class="tabletext2">$18 / 400gm</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=4">
                             <img class="productimg" src="assets/imgs/ScotchFillet.webp" alt="Scotch Fillet Steak">
                         </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Boerewors</td>
-                    <td class="tabletext1 tablecontent">Award winning hamburger patties</td>
-                    <td class="tabletext1 tablecontent">Angus sirloin steak</td>
-                    <td class="tabletext1 tablecontent">Angus scotch fillet steak</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$18.99 / 800gm | (multiple flavours) </td>
-                    <td class="tabletext2 tablecontent">$14.99 / 4 per pack</td>
-                    <td class="tabletext2 tablecontent">$18 / 400gm</td>
-                    <td class="tabletext2 tablecontent">$26 / 500gm</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Angus scotch fillet steak</div>
+                        <div class="tabletext2">$26 / 500gm</div>
+                    </div>
+                </div>
+                
+                <div class="mySlides">
+                    <div class="product-content">
                         <a href="product.html?id=5">
                             <img class="productimg" src="assets/imgs/Biltong.webp" alt="Beef Biltong">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Beef biltong</div>
+                        <div class="tabletext2">$10+ | (custom cuts)</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=6">
                             <img class="productimg" src="assets/imgs/chickenbreast.webp" alt="Chicken Breast">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Free range chicken breast</div>
+                        <div class="tabletext2">$11.99 / 500gm | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=7">
                             <img class="productimg" src="assets/imgs/wholechicken.webp" alt="Whole Chicken">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Free range whole chicken</div>
+                        <div class="tabletext2">$18 / whole size 16</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=8">
                             <img class="productimg" src="assets/imgs/drumstick.webp" alt="Chicken Drumstick">
                         </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Beef biltong</td>
-                    <td class="tabletext1 tablecontent">Free range chicken breast</td>
-                    <td class="tabletext1 tablecontent">Free range whole chicken</td>
-                    <td class="tabletext1 tablecontent">Free range chicken drumstick</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$10+ | (custom cuts) </td>
-                    <td class="tabletext2 tablecontent">$11.99 / 500gm | (multiple flavours)</td>
-                    <td class="tabletext2 tablecontent">$18 / whole size 16</td>
-                    <td class="tabletext2 tablecontent">$5.99 / 500gm</td>
-                </tr>
-                <tr>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Free range chicken drumstick</div>
+                        <div class="tabletext2">$5.99 / 500gm</div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="product-content">
                         <a href="product.html?id=9">
                             <img class="productimg" src="assets/imgs/dryword.webp" alt="Dry Wors">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Dry Wors</div>
+                        <div class="tabletext2">$10+ | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=10">
                             <img class="productimg" src="assets/imgs/lambrack.webp" alt="Lamb Rack">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Lamb rack</div>
+                        <div class="tabletext2">$26.50 / 500gm</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=11">
                             <img class="productimg" src="assets/imgs/ribs.webp" alt="Pork Ribs">
                         </a>
-                    </td>
-                    <td class="tablecontent">
+                        <div class="tabletext1">Pork spare ribs</div>
+                        <div class="tabletext2">$20 / 1.2kg | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
                         <a href="product.html?id=12">
-                            <img class="productimg" src="assets/imgs/lambleg.webp" alt="Butterfly Lamb Leg">
+                            <img class="productimg" src="assets/imgs/lambbutterflyleg.webp" alt="Butterfly Lamb leg">
                         </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tabletext1 tablecontent">Dry Wors</td>
-                    <td class="tabletext1 tablecontent">Lamb rack</td>
-                    <td class="tabletext1 tablecontent">Pork spare ribs</td>
-                    <td class="tabletext1 tablecontent">Butterfly lamb leg</td>
-                </tr>
-                <tr>
-                    <td class="tabletext2 tablecontent">$10+ | (multiple flavours) </td>
-                    <td class="tabletext2 tablecontent">$26.50 / 500gm</td>
-                    <td class="tabletext2 tablecontent">$20 / 1.2kg | (multiple flavours)</td>
-                    <td class="tabletext2 tablecontent">$24 / 700gm</td>
-                </tr>
-            </table>
-        </div>
+                        <div class="tabletext1">Butterfly lamb leg</div>
+                        <div class="tabletext2">$24 / 700gm</div>
+                    </div>
+                </div>
 
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
@@ -158,5 +146,25 @@
         <p>Twitter - @Themeatroomnz</p>
         <p>Themeatroom@gmail.com | 0283969863 | 26 Anzac Road, Browns Bay</p>
     </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n >= slides.length) {slideIndex = 0}    
+            if (n < 0) {slideIndex = slides.length - 1}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
 </body>
 </html>

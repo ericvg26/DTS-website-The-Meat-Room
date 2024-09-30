@@ -5,59 +5,6 @@
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
-    <style>
-        .content-wrapper {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .product-section {
-            flex: 0 0 70%; /* Take 70% of the width */
-            max-width: 70%;
-            text-align: left;
-            margin-top: 50px; /* To move the section down from the nav */
-        }
-
-        
-        .product-section h2 {
-            position: relative;
-            bottom: -40px;
-            left: 75px;
-            font-size: 44px;
-            font-family: "lulo-one", sans-serif;
-            color: #c55b5b;
-        }
-
-        .sidebar {
-            flex: 0 0 25%; /* Take 25% of the width */
-            max-width: 25%;
-            padding-left: 40px;
-            background-color: #f4f4f4;
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        table {
-            margin-left: 0; /* Align the table to the left edge */
-        }
-
-        .product-table img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .product-table .text {
-            text-align: center;
-            padding: 15px 0;
-            font-size: 18px;
-        }
-    </style>
-</head>
-
-<body>
     <div>
         <div class="top-bar">
             <h1>The Meat Room</h1>
@@ -65,124 +12,107 @@
         </div>
         <div class="nav">
             <a href="home.html">
-                <img class="logoimg" src="assets/imgs/LOGO.png">
+                <img class="logoimg" src="assets\imgs\LOGO.png">
             </a>
             <ul>
-                <li><a href="home.html">HOME</a></li>
+                <li>
+                    <a href="home.html">
+                        HOME
+                    </a>
+                </li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="shop.html">SHOP</a></li>
+                <li>
+                    <a href="shop.html">
+                        SHOP
+                    </a>
+                </li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <li><a href="contact.html">CONTACT</a></li>
+                <li>
+                    <a href="contact.html">
+                        CONTACT
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
+</head>
 
-    <div class="content-wrapper">
-        <div class="product-section">
-            <h2>POPULAR PRODUCTS</h2>
-            <table style="padding-bottom:15px;padding-top:40px;padding-bottom:70px;">
-                <tr>
-                    <td>
-                        <a href="product.html?id=1">
-                            <img class="productimg" src="assets/imgs/boerewors.webp" alt="Boerewors">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=2">
-                            <img class="productimg" src="assets/imgs/patties.webp" alt="Hamburger Patties">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=3">
-                            <img class="productimg" src="assets/imgs/BeefSirloin.webp" alt="Sirloin Steak">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=4">
-                            <img class="productimg" src="assets/imgs/ScotchFillet.webp" alt="Scotch Fillet Steak">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text">Boerewors - $20.00 / 800gm</td>
-                    <td class="text">Hamburger patties - $15.00 / 4 per pack</td>
-                    <td class="text">Sirloin steak - $17.00 / 400gm</td>
-                    <td class="text">Scotch fillet steak - $26.00 / 500gm</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="product.html?id=5">
-                            <img class="productimg" src="assets/imgs/Biltong.webp" alt="Beef Biltong">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=6">
-                            <img class="productimg" src="assets/imgs/chickenbreast.webp" alt="Chicken Breast">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=7">
-                            <img class="productimg" src="assets/imgs/wholechicken.webp" alt="Whole Chicken">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=8">
-                            <img class="productimg" src="assets/imgs/drumstick.webp" alt="Chicken Drumstick">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text">Beef Biltong - $59.00 / kg</td>
-                    <td class="text">Chicken breast - $10.99 / 500gm</td>
-                    <td class="text">Whole chicken size 16 - $16.00</td>
-                    <td class="text">Chicken drumstick - $7.00 / 500gm</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="product.html?id=9">
-                            <img class="productimg" src="assets/imgs/dryword.webp" alt="Dry Wors">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=10">
-                            <img class="productimg" src="assets/imgs/lambrack.webp" alt="Lamb Rack">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=11">
-                            <img class="productimg" src="assets/imgs/ribs.webp" alt="Pork Ribs">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="product.html?id=12">
-                            <img class="productimg" src="assets/imgs/lambleg.webp" alt="Butterfly Lamb Leg">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text">Dry Wors - $62.99 / kg</td>
-                    <td class="text">Lamb rack - $26.50 / 500gm</td>
-                    <td class="text">Pork ribs - $20.00 / 1.2kg</td>
-                    <td class="text">Butterfly lamb leg - $25.50 / 700gm</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="sidebar">
-            <!-- Placeholder for hyperlinks or additional content -->
-            <p><a href="chicken.html">Chicken</a></p>
-            <p><a href="beef.html">Beef</a></p>
-            <p><a href="pork.html">Pork</a></p>
-            <!-- Add more content here -->
-        </div>
+<body>
+    <div>
+        <h2 style="width:100%;text-align:center;font-size:30px;margin-bottom:0;">PRODUCTS</h2>
+    <table style="padding-bottom:5px;padding-top:40px;padding-bottom:70px;">
+        <tr>
+            <!-- product images -->
+            <td>
+                <img class="productimg" src="assets\imgs\boerewors.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/patties.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/BeefSirloin.webp">
+            <td>
+                <img class="productimg" src="assets/imgs/ScotchFillet.webp">
+            </td>
+        </tr>
+        <tr>
+            <!-- product titles and prices -->
+            <td class="text">Boerewors - $20.00 / 800gm</td>
+            <td class="text">Hamburger patties - $15.00 / 4 per pack</td>
+            <td class="text">Sirloin steak - $17.00 / 400gm</td>
+            <td class="text">Scotch fillet steak - $26.00 / 500gm</td>
+        </tr>
+        <tr>
+            <td>
+                <img class="productimg" src="assets/imgs/Biltong.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/chickenbreast.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/wholechicken.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/drumstick.webp">
+            </td>
+        </tr>
+        <tr>
+            <td class="text">Beef Biltong - $59.00 / kg</td>
+            <td class="text">Chicken breast - $10.99 / 500gm</td>
+            <td class="text">Whole chicken size 16 - $16.00</td>
+            <td class="text">Chicken drumstick - $7.00 / 500gm</td>
+        </tr>
+        <tr>
+            <td>
+                <img class="productimg" src="assets/imgs/dryword.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/lambrack.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/ribs.webp">
+            </td>
+            <td>
+                <img class="productimg" src="assets/imgs/lambleg.webp">
+            </td>
+        </tr>
+        <tr>
+            <td class="text">Dry Wors - $62.99 / kg</td>
+            <td class="text">Lamb rack - $26.50 / 500gm</td>
+            <td class="text">Pork ribs - $20.00 / 1.2kg</td>
+            <td class="text">Butterfly lamb leg - $25.50 / 700gm</td>
+        </tr>
+    </table>
     </div>
-
     <div class="footer">
         <h2>Contact Info:</h2>
         <p>Instagram - @Themeatroom</p>
         <p>FaceBook - @Themeatroomnz</p>
         <p>Twitter - @Themeatroomnz</p>
         <p>Themeatroom@gmail.com | 0283969863 | 26 Anzac Road, Browns Bay</p>
+
     </div>
 </body>
+
+
 </html>

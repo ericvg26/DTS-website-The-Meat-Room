@@ -141,6 +141,69 @@
             margin-top: 5px;
         }
 
+        /* Centering the slideshow container */
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling for individual slides */
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+
+        /* Centering and styling the product content */
+        .product-content {
+            display: inline-block;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Styling for the product images */
+        .productimg {
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        /* Previous and Next buttons for the slideshow */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Hover effect on the slideshow buttons */
+        .prev:hover, .next:hover {
+            background-color: rgba(74, 72, 72, 0.8);
+        }
+
         /* Responsive styles for larger screens */
         @media (min-width: 768px) {
             .product-details {
@@ -206,6 +269,15 @@
                 </li>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <li><a href="contact.html">CONTACT</a></li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="dropdown">
+                    <a href="#">ACCOUNT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="sign_up.html">Sign up</a></li>
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="logout.html">Log out</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

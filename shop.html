@@ -5,6 +5,67 @@
     <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/rpj3trr.css">
+    <style>
+        /* Add some basic styling to ensure the slideshow works */
+        
+        
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+
+        .product-content {
+            display: inline-block;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .productimg {
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            z-index: 1;
+        }
+
+        .prev {
+           
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            
+            border-radius: 0 3px 3px 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(74, 72, 72, 0.8);
+        }
+    </style>
 </head>
 
 <body>
@@ -40,6 +101,16 @@
                     </li>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <li><a href="contact.html">CONTACT</a></li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <li class="dropdown">
+                        <a href="#">ACCOUNT</a>
+                        <ul class="dropdown-content">
+                            <li><a href="sign_up.html">Sign up</a></li>
+                            <li><a href="login.html">Log in</a></li>
+                            <li><a href="logout.html">Log out</a></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -52,11 +123,106 @@
         
     </div>
 
-    <div class="content-wrapper">
+    <div>
         <div class="product-section2">
             <h1>POPULAR PRODUCTS</h1>
-            <div class="slideshow-container" id="product-slides">
-                <!-- Products will be inserted here dynamically -->
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <div class="product-content">
+                        <a href="product.html?id=1">
+                            <img class="productimg" src="assets/imgs/boerewors.webp" alt="Boerewors">
+                        </a>
+                        <div class="tabletext1">Boerewors</div>
+                        <div class="tabletext2">$18.99 / 800gm | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=2">
+                            <img class="productimg" src="assets/imgs/patties.webp" alt="Hamburger Patties">
+                        </a>
+                        <div class="tabletext1">Award winning hamburger patties</div>
+                        <div class="tabletext2">$14.99 / 4 per pack</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=3">
+                            <img class="productimg" src="assets/imgs/BeefSirloin.webp" alt="Sirloin Steak">
+                        </a>
+                        <div class="tabletext1">Angus sirloin steak</div>
+                        <div class="tabletext2">$18 / 400gm</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=4">
+                            <img class="productimg" src="assets/imgs/ScotchFillet.webp" alt="Scotch Fillet Steak">
+                        </a>
+                        <div class="tabletext1">Angus scotch fillet steak</div>
+                        <div class="tabletext2">$26 / 500gm</div>
+                    </div>
+                </div>
+                
+                <div class="mySlides">
+                    <div class="product-content">
+                        <a href="product.html?id=5">
+                            <img class="productimg" src="assets/imgs/Biltong.webp" alt="Beef Biltong">
+                        </a>
+                        <div class="tabletext1">Beef biltong</div>
+                        <div class="tabletext2">$10+ | (custom cuts)</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=6">
+                            <img class="productimg" src="assets/imgs/chickenbreast.webp" alt="Chicken Breast">
+                        </a>
+                        <div class="tabletext1">Free range chicken breast</div>
+                        <div class="tabletext2">$11.99 / 500gm | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=7">
+                            <img class="productimg" src="assets/imgs/wholechicken.webp" alt="Whole Chicken">
+                        </a>
+                        <div class="tabletext1">Free range whole chicken</div>
+                        <div class="tabletext2">$18 / whole size 16</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=8">
+                            <img class="productimg" src="assets/imgs/drumstick.webp" alt="Chicken Drumstick">
+                        </a>
+                        <div class="tabletext1">Free range chicken drumstick</div>
+                        <div class="tabletext2">$5.99 / 500gm</div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="product-content">
+                        <a href="product.html?id=9">
+                            <img class="productimg" src="assets/imgs/dryword.webp" alt="Dry Wors">
+                        </a>
+                        <div class="tabletext1">Dry Wors</div>
+                        <div class="tabletext2">$10+ | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=10">
+                            <img class="productimg" src="assets/imgs/lambrack.webp" alt="Lamb Rack">
+                        </a>
+                        <div class="tabletext1">Lamb rack</div>
+                        <div class="tabletext2">$26.50 / 500gm</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=11">
+                            <img class="productimg" src="assets/imgs/ribs.webp" alt="Pork Ribs">
+                        </a>
+                        <div class="tabletext1">Pork spare ribs</div>
+                        <div class="tabletext2">$20 / 1.2kg | (multiple flavours)</div>
+                    </div>
+                    <div class="product-content">
+                        <a href="product.html?id=12">
+                            <img class="productimg" src="assets/imgs/lambbutterflyleg.webp" alt="Butterfly Lamb leg">
+                        </a>
+                        <div class="tabletext1">Butterfly lamb leg</div>
+                        <div class="tabletext2">$24 / 700gm</div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
     </div>
@@ -70,71 +236,30 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('fetch_product_data.php')
-                .then(response => response.json())
-                .then(products => {
-                    const slidesContainer = document.getElementById('product-slides');
-                    const chunkSize = 4;
-                    const productChunks = [];
-
-                    // Chunk the products into groups of 4 for the slides
-                    for (let i = 0; i < Object.keys(products).length; i += chunkSize) {
-                        productChunks.push(Object.entries(products).slice(i, i + chunkSize));
-                    }
-
-                    productChunks.forEach((chunk, index) => {
-                        const slideDiv = document.createElement('div');
-                        slideDiv.className = `mySlides ${index === 0 ? 'active' : ''}`;
-                        
-                        chunk.forEach(([id, product]) => {
-                            const productDiv = document.createElement('div');
-                            productDiv.className = 'product-content';
-                            productDiv.innerHTML = `
-                                <a href="product.html?id=${id}">
-                                    <img class="productimg" src="${product.image}" alt="${product.name}">
-                                </a>
-                                <div class="tabletext1">${product.name}</div>
-                                <div class="tabletext2">${product.price_description}</div>
-                            `;
-                            slideDiv.appendChild(productDiv);
-                        });
-
-                        slidesContainer.appendChild(slideDiv);
-                    });
-
-                    // Navigation buttons
-                    const prevButton = document.createElement('a');
-                    prevButton.className = 'prev';
-                    prevButton.innerHTML = '&#10094;';
-                    prevButton.onclick = function() { plusSlides(-1); };
-
-                    const nextButton = document.createElement('a');
-                    nextButton.className = 'next';
-                    nextButton.innerHTML = '&#10095;';
-                    nextButton.onclick = function() { plusSlides(1); };
-
-                    slidesContainer.appendChild(prevButton);
-                    slidesContainer.appendChild(nextButton);
-                })
-                .catch(error => console.error('Error fetching product data:', error));
-        });
-
         let slideIndex = 0;
+        showSlides(slideIndex);
 
         function plusSlides(n) {
-            showSlides(slideIndex += n);
+            slideIndex += n;
+            showSlides(slideIndex);
         }
 
         function showSlides(n) {
             const slides = document.getElementsByClassName("mySlides");
-            if (n >= slides.length) { slideIndex = 0; }
-            if (n < 0) { slideIndex = slides.length - 1; }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
+            if (n >= slides.length) {
+                slideIndex = 0;
             }
-            slides[slideIndex].classList.add("active");
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
         }
+
+        // Initialize the slideshow
+        showSlides(slideIndex);
     </script>
 </body>
 </html>
